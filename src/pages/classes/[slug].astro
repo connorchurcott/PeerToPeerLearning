@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { ClassesData } from "../../data/ClassesData.js";
+import "../../styles/IndividualClassStyles.css"
+
+export async function getStaticPaths() {
+    return ClassesData.map(cls => ({
+        params: { slug: cls.slug },
+        props: { cls }
+    }))
+}
+
+const { cls } = Astro.props
+---
+
+<BaseLayout>
+	<h1>{cls.title}</h1>
+
+  	<section id="class-page">
+
+		<div id="instructor">
+			<img src={cls.instructorImg} alt={cls.instructorName} />
+			<p>{cls.instructorName}</p>
+		</div>
+
+    	<div id="descriptions">
+			<h2>Course Overview:</h2>
+			<p>{cls.longDescription}</p>
+
+			<h2>Core Curriculum:</h2>
+			{cls.bulletList && cls.bulletList.length > 0 && (
+			<ul>
+				{cls.bulletList.map(item => (
+					<li>{item}</li>
+				))}
+			</ul>
+			)}
+
+			<h2>Class Time:</h2>
+			<p>{cls.dayTime}</p>
+   		</div>
+
+		<a href="/contact" id="enroll-btn">Enroll</a>
+
+		
+
+
+  </section>
+</BaseLayout>

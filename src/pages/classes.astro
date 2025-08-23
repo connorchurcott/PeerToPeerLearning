@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ClassCard from "../components/ClassCard.astro";
+import { ClassesData } from "../data/ClassesData";
+import "../styles/ClassesStyles.css"
+---
+
+<BaseLayout>
+	<h1>Our Classes (Fall 2025)</h1>
+	
+	<div id="cards-grid">
+      {ClassesData.map(cls => (
+          <ClassCard {...cls} />
+      ))}
+
+	</div>
+</BaseLayout>
+

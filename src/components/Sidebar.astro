@@ -1,0 +1,115 @@
+---
+---
+
+<!-- Top right button -->
+<div id="hamburger">&#9776;</div>
+
+<!-- Pop out sidebar -->
+ <nav id="sidebar">
+    <a href="#" id="closeBtn">&times;</a>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#about" rel="external">About</a></li>
+        <li><a href="/classes">Our Classes</a></li>
+        <li><a href="/contact">Contact & Enrollment</a></li>
+    </ul>
+ </nav>
+
+ <style scoped>
+    #hamburger { 
+        position: fixed;
+        top: 20px;
+        right: 25px;
+
+        font-size: 50px;
+        cursor: pointer;
+        z-index: 1001;
+
+        color: #e0e1dd;
+        padding: 10px 14px;
+        border-radius: 5px;
+    }
+
+    #hamburger:hover { 
+        color: #F26B66;
+    }
+
+    #sidebar { 
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: #415a77;
+        color: white;
+        padding-top: 60px;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    #sidebar ul { 
+        list-style: none;
+        padding: 0;
+    }
+
+    #sidebar ul li {
+        padding: 15px;
+        text-align: center;
+    }
+
+    #sidebar ul li a {
+        color: #e0e1dd;
+        text-decoration: none;
+        font-size: 25px;
+    }
+
+    #sidebar ul li a:hover { 
+        color: #F26B66;
+    }
+
+    #sidebar.active { 
+        right: 0;
+    }
+
+    #closeBtn { 
+        position: absolute;
+        top: 15px;
+        right: 20px;
+
+        font-size: 50px;
+        text-decoration: none;
+
+        color: #e0e1dd;
+    }
+
+    #closeBtn:hover { 
+        color: #F26B66;
+    }
+ </style>
+
+ <script>
+
+    // Checks for opening and closing of sidebar menu
+    document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.getElementById("hamburger");
+        const sidebar = document.getElementById("sidebar");
+        const closeBtn = document.getElementById("closeBtn");
+
+        hamburger?.addEventListener("click", () => { 
+            sidebar?.classList.add("active");
+            hamburger.style.display = "none";
+        
+        });
+
+        closeBtn?.addEventListener("click", (e) => {
+            e.preventDefault();
+            sidebar?.classList.remove("active");
+
+            if(hamburger){
+                hamburger.style.display = "block"; 
+            }
+            
+        })
+    })
+ </script>
+ 

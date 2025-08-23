@@ -1,0 +1,95 @@
+main { 
+	  display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 100px 20px;
+	  text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #e0e1dd;
+}
+
+#class-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: left;
+}
+
+#instructor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#instructor img {
+    width: 200px;
+    border-radius: 5%;
+}
+
+#instructor p { 
+    margin-top: 10px;
+    color: #e0e1dd;
+}
+
+#descriptions {
+  flex: 1;
+  max-width: 600px;
+}
+
+#descriptions h2 {
+    color: #e0e1dd;
+    margin-bottom: 15px;
+}
+    
+#descriptions p{
+    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #e0e1dd;
+}
+
+#descriptions ul {
+  list-style: circle;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  color: #e0e1dd;
+
+  columns: 2 20px;
+  column-gap: 0px;
+}
+
+#descriptions li {
+  margin-bottom: 8px;
+  break-inside: avoid;
+}
+
+#enroll-btn { 
+    display: inline-block;
+    margin-top: 40px;       
+    padding: 12px 30px;
+    background-color: #415a77; 
+    color: #e0e1dd;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+#enroll-btn:hover {
+  background-color: #F26B66;  
+
+}
+
+

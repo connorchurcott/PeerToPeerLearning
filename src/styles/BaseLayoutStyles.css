@@ -1,0 +1,33 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* removes the scrollbar from the screen */
+html::-webkit-scrollbar { 
+    width: 0%;
+    background: transparent;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    height: 100%;
+    margin: 0;
+}
+
+body { 
+    background-color: #1b263b;
+    font-family: 'Signika Negative', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: none;
+}
+
+
+
+#content{
+    flex-grow: 1;
+    padding-bottom: 120px;
+}

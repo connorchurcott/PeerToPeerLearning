@@ -1,0 +1,72 @@
+---
+import FAQSection from "./FAQSection.astro"
+import OurTeamSection from "../components/OurTeamSection.astro"
+---
+
+<section id="about">
+    <h1>About Us</h1>
+    <p>
+        We are a tutoring company that specializes in preparing kids from grades 6-12 for AP, IB, and A-Level courses. 
+        Students who take our course find they are more prepared when it comes to talking AP exams, and are way ahead of 
+        their peers who have not attended our classes.  
+    </p>
+
+    <p>
+        Our goal is to help improve students confidence in homework and tests while also preparing them for post secondary 
+        level content. 
+    </p>
+</section>
+
+<section id="currentClasses">
+    <h1>Current Classes & Enrollment</h1>
+    <p>
+        Our offered classes change alongside the school year, to see our currently offered classes please visit the <a href="/classes">Our Classes</a> page.
+    </p>
+
+    <p>
+        For information regarding how to enroll, please visit the <a href="/contact">Enrollment</a> page. 
+    </p>
+</section>
+
+<section>
+    <FAQSection />
+</section>
+
+<section>
+    <OurTeamSection />
+</section>
+
+<style scoped> 
+    section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 80px 20px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+
+        color: #e0e1dd;
+    }
+
+    a {
+        color: #F26B66;
+    }
+    
+    p {
+        max-width: 600px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        padding-bottom: 30px;
+
+        color: #e0e1dd;
+    }
+
+
+
+</style>
