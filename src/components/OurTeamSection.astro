@@ -1,22 +1,46 @@
+---
+---
+
 <section id="ourTeam">
     <h1>Our Team</h1>
-    <p>
-        Meet the amazing team (something more here idk what to put)
-    </p>
+
+
 
     <div class="team-container">
-        <div class="team-member">
+
+        <div class="president">
             <img src="/images/instructors/godfrey.jpg" alt="Godfrey, First Elden Lord" />
             <h3>Godfrey, First Elden Lord</h3>
-            <p>this mf was litterally the first elden lord.</p>
+            <p>This mf was literally the first Elden Lord.</p>
         </div>
 
-        <div class="team-member">
+        <div class="team-member alt-layout">
             <img src="/images/instructors/namelessking.jpg" alt="The Nameless King" />
-            <h3>The Nameless King</h3>
-            <p>will ride the dragon to the class.</p>
+            <div class="member-text">
+                <h3>The Nameless King</h3>
+                <p>will ride the dragon to the class.</p>
+            </div>
         </div>
+
+        <div class="team-member alt-layout reverse">
+            <img src="/images/instructors/malenia.jpg" alt="Malenia, Blade of Miquella" />
+            <div class="member-text">
+                <h3>Malenia, Blade of Miquella</h3>
+                <p>scarlet rot bruh bring berries</p>
+            </div>
+        </div>
+
+        <div class="team-member alt-layout">
+            <img src="/images/instructors/patches.webp" alt="Patches" />
+            <div class="member-text">
+                <h3>Patches</h3>
+                <p>he bald af wtf man nah we firing him soon fuh this shi</p>
+            </div>
+        </div>
+
+        
     </div>
+
 </section>
 
 <style scoped>
@@ -25,6 +49,7 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+        /* padding: 40px 20px; */
     }
 
     #ourTeam h1 {
@@ -33,7 +58,7 @@
         color: #e0e1dd;
     }
 
-    #ourTeam p {
+    #ourTeam > p {
         max-width: 600px;
         margin: 0 auto 40px auto;
         font-size: 1.1rem;
@@ -41,40 +66,71 @@
         color: #e0e1dd;
     }
 
-
-    .team-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 40px; 
-        max-width: 1200px;
-    }
-
-
-    .team-member {
+    /* President style (centered) */
+    .president {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-
-        width: 250px; 
+        margin-bottom: 60px;
+        padding-top: 50px;
     }
 
-    .team-member img {
-        width: 150px;
-        height: 150px;
+    .president img {
+        width: 250px;
+        height: 250px;
         object-fit: cover;
         margin-bottom: 15px;
         border-radius: 5%;
     }
 
-    .team-member h3 {
+    .president p, h3 {
+        color: #e0e1dd;
+    }
+
+    /* Team container */
+    .team-container {
+        display: flex;
+        flex-direction: column;
+        gap: 90px;
+        max-width: 1400px;
+        width: 100%;
+    }
+
+    .team-member.alt-layout {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 0; /* Remove side padding */
+    }
+
+    .team-member.alt-layout.reverse {
+        flex-direction: row-reverse;
+    }
+
+    .team-member.alt-layout img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        flex-shrink: 0;  /* ← prevents image from shrinking */
+        border-radius: 5%;
+    }
+
+    /* .member-text {
+        flex: 1;
+        max-width: 1000px;
+    } */
+
+    .member-text h3 {
         font-size: 1.3rem;
         margin-bottom: 10px;
         color: #e0e1dd;
     }
 
-    .team-member p {
+    .member-text p {
         font-size: 1rem;
         line-height: 1.4;
         color: #e0e1dd;
